@@ -1,0 +1,48 @@
+body{
+width: 375px;
+height: 800px;
+}
+*{
+    box-sizing: border-box;
+}
+.topo{
+    position: fixed;
+    top: 0px;
+    font-size: 42px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 375px;
+    height: 80px;
+    background-color: red;
+}
+.topo img{
+    width: 53px;
+    height: 75px;
+}
+.envia-msg{
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    bottom: 0;
+    left: 0;
+    width: 375px;
+    height: 80px;
+    font-size: 26px;
+    background-color: white;
+}
+.envia-msg input{
+    width: 145px;
+    height: 30px;
+    border-color: transparent;
+}
+.corpo{
+    width: 375px;
+    margin-top: 80px;
+    padding-bottom: 80px;
+}
+.corpo h1{
+    width: 375px;
+    word-wrap: break-word;
+}
