@@ -36,7 +36,7 @@ function sucesso(resposta){
                 mensagens.innerHTML +=`
                 <div class="normal texto a${i}">
                 <h1>
-                <span class="fraco">(${resposta[i].time})</span>  <span class="forte">${resposta[i].from}</span> para <span class="forte">${resposta[i].to}</span>: ${resposta[i].text}
+                <span class="fraco">(${resposta[i].time}) </span>  <span class="forte">${resposta[i].from}</span> para <span class="forte">${resposta[i].to}</span>: ${resposta[i].text}
                 </h1>
                 </div>
                 `
@@ -45,7 +45,7 @@ function sucesso(resposta){
                 mensagens.innerHTML +=`
                 <div class="status texto a${i}">
                 <h1>
-                <span class="fraco">(${resposta[i].time})</span>  <span class="forte">${resposta[i].from}</span> ${resposta[i].text}
+                <span class="fraco">(${resposta[i].time}) </span>  <span class="forte">${resposta[i].from}</span> ${resposta[i].text}
                 </h1>
                 </div>
                 `
@@ -54,7 +54,7 @@ function sucesso(resposta){
                 mensagens.innerHTML +=`
                 <div class="private texto a${i}">
                 <h1>
-                <span class="fraco">(${resposta[i].time})</span>  <span class="forte">${resposta[i].from}</span> reservadamente para <span class="forte">${resposta[i].to}</span>: ${resposta[i].text}
+                <span class="fraco">(${resposta[i].time}) </span>  <span class="forte">${resposta[i].from}</span> reservadamente para <span class="forte">${resposta[i].to}</span>: ${resposta[i].text}
                 </h1>
                 </div>
                 `
