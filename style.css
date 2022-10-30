@@ -1,7 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body{
-width: 375px;
-height: 800px;
+width: 100%;
+height: 100%;
+background-color: #F3F3F3;
 }
 *{
     box-sizing: border-box;
@@ -13,11 +14,12 @@ height: 800px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 375px;
+    width: 100%;
     height: 80px;
-    background-color: red;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 22px;
+    padding-right: 22px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.05);
 }
 .topo img{
     width: 53px;
@@ -30,12 +32,13 @@ height: 800px;
     align-items: center;
     bottom: 0;
     left: 0;
-    width: 375px;
+    width: 100%;
     height: 80px;
     font-size: 26px;
-    background-color: white;
-    padding-left: 12px;
-    padding-right: 12px;
+    padding-left: 17px;
+    padding-right: 17px;
+    background: #FFFFFF;
+    box-shadow: 0px -4px 6px rgba(0, 0, 0, 0.05);
 }
 .envia-msg input{
     width: 145px;
@@ -46,22 +49,23 @@ height: 800px;
     outline: 0;
 }
 .corpo{
-    width: 375px;
-    margin-top: 80px;
+    width: 100%;
+    margin-top: 106px;
     padding-bottom: 80px;
+    
 }
 .corpo h1{
-    width: 375px;
+    width: 100%;
     word-wrap: break-word;
 }
 .message{
-    background-color: white;
+    background-color: #FFFFFF;
 }
 .status{
-    background-color: grey;
+    background-color: #DCDCDC;
 }
 .private{
-    background-color: rgb(255, 222, 222);
+    background-color: #FFDEDE;
 }
 .texto{
     font-family: 'Roboto';
@@ -73,9 +77,15 @@ height: 800px;
     align-items: center;
     padding-top: 12px;
     padding-bottom: 12px;
+    padding-left: 8px;
+    padding-right: 9px;
     margin-bottom: 2px;
     margin-top: 2px;
+    border-radius: 2px;
 }
-span{
-    font-weight: bold;
+.forte{
+    font-weight: 700;
+}
+.fraco{
+    color: rgba(170, 170, 170, 1);
 }
