@@ -11,7 +11,7 @@ let msg = {
 perguntaNome();
 chat();
 setInterval(chat, 3000);
-setInterval(ficaOn, 5000);
+
 function ficaOn(){
     axios.post('https://mock-api.driven.com.br/api/v6/uol/status', nome);
 }
@@ -19,6 +19,10 @@ function perguntaNome(){
     nome = { name:`${prompt("seu lindo nome")}`}
     mandaNome = axios.post('https://mock-api.driven.com.br/api/v6/uol/participants', nome);
     mandaNome.catch(perguntaNome);
+    mandaNome.then(intervaloOn);
+}
+function intervaloOn(){
+    setInterval(ficaOn, 5000);
 }
 function chat(){
     promisse = axios.get('https://mock-api.driven.com.br/api/v6/uol/messages');
