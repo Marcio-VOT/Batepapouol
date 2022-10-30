@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
 body{
 width: 375px;
 height: 800px;
@@ -15,6 +16,8 @@ height: 800px;
     width: 375px;
     height: 80px;
     background-color: red;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .topo img{
     width: 53px;
@@ -31,11 +34,16 @@ height: 800px;
     height: 80px;
     font-size: 26px;
     background-color: white;
+    padding-left: 12px;
+    padding-right: 12px;
 }
 .envia-msg input{
     width: 145px;
     height: 30px;
     border-color: transparent;
+    box-shadow: 0 0 0 0;
+    border: 0 none;
+    outline: 0;
 }
 .corpo{
     width: 375px;
@@ -45,4 +53,29 @@ height: 800px;
 .corpo h1{
     width: 375px;
     word-wrap: break-word;
+}
+.message{
+    background-color: white;
+}
+.status{
+    background-color: grey;
+}
+.private{
+    background-color: rgb(255, 222, 222);
+}
+.texto{
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    margin-bottom: 2px;
+    margin-top: 2px;
+}
+span{
+    font-weight: bold;
 }
