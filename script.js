@@ -1,4 +1,6 @@
 let i = 0;
+let seguraNome = "b"
+let aparecer = "a"
 let promisse
 const mensagens = document.querySelector('.corpo');
 let nome = ""
@@ -30,36 +32,40 @@ function sucesso(resposta){
     while( i < resposta.length){
         // 1-- mensagem de entrando/saindo // 2-- mensagens globais// 3-- mensagens pessoais (só exibe se for pra vc msm)
         
-        if(resposta[i].type == "message"){
-            mensagens.innerHTML +=`
-            <div class="normal texto">
-            <h1>
-            (${resposta[i].time}) ${resposta[i].from} para ${resposta[i].to}: ${resposta[i].text}
-            </h1>
-            </div>
-            `
-        }
-        else if(resposta[i].type == "status"){
-            mensagens.innerHTML +=`
-            <div class="status texto">
-            <h1>
-            (${resposta[i].time}) ${resposta[i].from} ${resposta[i].text}
-            </h1>
-            </div>
-            `
-        }
-        else if(resposta[i].type == "private_message" && resposta[i].to == nome.name){
-            mensagens.innerHTML +=`
-            <div class="private texto">
-            <h1>
-            (${resposta[i].time}) ${resposta[i].from} reservadamente para ${resposta[i].to}: ${resposta[i].text}
-            </h1>
-            </div>
-            `
-        }
+            if(resposta[i].type == "message"){
+                mensagens.innerHTML +=`
+                <div class="normal texto a${i}">
+                <h1>
+                (${resposta[i].time}) ${resposta[i].from} para ${resposta[i].to}: ${resposta[i].text}
+                </h1>
+                </div>
+                `
+            }
+            else if(resposta[i].type == "status"){
+                mensagens.innerHTML +=`
+                <div class="status texto a${i}">
+                <h1>
+                (${resposta[i].time}) ${resposta[i].from} ${resposta[i].text}
+                </h1>
+                </div>
+                `
+            }
+            else if(resposta[i].type == "private_message" && (resposta[i].to == nome.name || resposta[i].from == nome.name )){
+                mensagens.innerHTML +=`
+                <div class="private texto a${i}">
+                <h1>
+                (${resposta[i].time}) ${resposta[i].from} reservadamente para ${resposta[i].to}: ${resposta[i].text}
+                </h1>
+                </div>
+                `
+            }
+        
         i++;
     }
-    
+    aparecer = document.querySelector(`.a${resposta.length-1}`);
+    if(seguraNome.innerHTML != aparecer.innerHTML)
+        aparecer.scrollIntoView();
+    seguraNome = aparecer
 }
 function erro(){
     alert('erro');
